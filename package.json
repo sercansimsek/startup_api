@@ -1,0 +1,24 @@
+{
+  "name": "startup_planet",
+  "version": "1.0.0",
+  "description": "a dataset of the world's most promising startups",
+  "homepage": "https://github.com/sercansimsek/startup_api#readme",
+  "bugs": {
+    "url": "https://github.com/sercansimsek/startup_api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sercansimsek/startup_api.git"
+  },
+  "license": "ISC",
+  "author": "Sercan Simsek",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
