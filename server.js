@@ -1,1 +1,7 @@
-console.log("We have a package.json!");
+import express from "express";
+
+const PORT = 8000;
+
+const app = express();
+
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
