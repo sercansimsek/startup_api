@@ -46,4 +46,46 @@ app.get("/api", (req, res) => {
   res.json(filteredData);
 });
 
+app.get("/api/country/:countryName", (req, res) => {
+  let filteredData = startups;
+  const { countryName } = req.params;
+  if (countryName) {
+    filteredData = filteredData.filter(
+      (startup) => startup.country.toLowerCase() === countryName.toLowerCase(),
+    );
+  }
+
+  res.json(filteredData);
+});
+
+app.get("/api/continent/:continentName", (req, res) => {
+  let filteredData = startups;
+
+  const { continentName } = req.params;
+
+  if (continentName) {
+    filteredData = filteredData.filter(
+      (startup) =>
+        startup.continent.toLowerCase() === continentName.toLowerCase(),
+    );
+  }
+
+  res.json(filteredData);
+});
+
+app.get("/api/industry/:industryName", (req, res) => {
+  let filteredData = startups;
+
+  const { industryName } = req.params;
+
+  if (industryName) {
+    filteredData = filteredData.filter(
+      (startup) =>
+        startup.industry.toLowerCase() === industryName.toLowerCase(),
+    );
+  }
+
+  res.json(filteredData);
+});
+
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
